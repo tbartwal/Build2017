@@ -2,12 +2,6 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "StorageAccountName1": {
-            "type": "string"
-        },
-        "StorageAccountName2": {
-            "type": "string"
-        }
     },
     "variables": {},
     "resources": [
@@ -26,9 +20,9 @@
                     "resources": [
                         {
                             "type": "Microsoft.Storage/storageAccounts",
-                            "name": "[parameters('StorageAccountName2')]",
+                            "name": "[concat('storage2', uniqueString(resourceGroup().id))]",
                             "apiVersion": "2015-06-15",
-                            "location": "West US",
+                            "location": "Australia East",
                             "properties": {
                                 "accountType": "Standard_LRS"
                             }
@@ -40,9 +34,9 @@
         },
         {
             "type": "Microsoft.Storage/storageAccounts",
-            "name": "[parameters('StorageAccountName1')]",
+            "name": "[concat('storage1', uniqueString(resourceGroup().id))]",
             "apiVersion": "2015-06-15",
-            "location": "West US",
+            "location": "Australia East",
             "properties": {
                 "accountType": "Standard_LRS"
             }
