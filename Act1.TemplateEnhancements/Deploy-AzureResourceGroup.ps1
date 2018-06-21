@@ -5,7 +5,7 @@
 
 
 Param(
-    [string] [Parameter(Mandatory=$true)] $ArtifactStagingDirectory,
+    [string] [Parameter(Mandatory=$false)] $ArtifactStagingDirectory,
     [string] [Parameter(Mandatory=$true)] $ResourceGroupLocation,
     [string] $ResourceGroupName = $ArtifactStagingDirectory.replace('.\',''), #remove .\ if present
     [switch] $UploadArtifacts,
