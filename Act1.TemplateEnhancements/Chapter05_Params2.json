@@ -1,0 +1,24 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0" ,
+  "parameters": {
+    "passwordOrSshKey": {
+      "value": "password"
+    },
+     "adminUsername": {
+      "value": "marc.kean"
+    },
+    "adminPassword": {
+      "value": "Passw0rd0000"
+    },
+    "adminSshKey": {
+      "value": "322777401322777401"
+    },
+    "dnsLabelPrefix": {
+      "value": "mck2"
+    },
+    "ubuntuOSVersion": {
+      "value": "16.04.0-LTS"
+    }
+  }
+}
