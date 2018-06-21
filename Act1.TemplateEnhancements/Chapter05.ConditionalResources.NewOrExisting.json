@@ -92,7 +92,7 @@
             "properties": {
                 "publicIPAllocationMethod": "[variables('publicIPAddressType')]",
                 "dnsSettings": {
-                    "domainNameLabel": "[parameters('dnsLabelPrefix')]"
+                    "domainNameLabel": "[concat(toLower(parameters('dnsLabelPrefix')), uniqueString(resourceGroup().id))]"
                 }
             }
         },

@@ -62,7 +62,7 @@
                         "value": "[parameters('adminPassword')]"
                     },
                     "dnsLabelPrefix": {
-                        "value": "[parameters('dnsLabelPrefix')]"
+                        "value": "[concat(toLower(parameters('dnsLabelPrefix')), uniqueString(resourceGroup().id))]"
                     },
                     "ubuntuOSVersion": {
                         "value": "[parameters('ubuntuOSVersion')]"
